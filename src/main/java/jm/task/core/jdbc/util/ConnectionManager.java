@@ -18,6 +18,9 @@ public static Connection open(){
             throw new RuntimeException(e);
         }
     }
-
+public static SessionFactory getSessionFactory(){
+        Configuration configuration = new Configuration().addAnnotatedClass(User.class);
+        return configuration.buildSessionFactory();
+    }
 
 }
